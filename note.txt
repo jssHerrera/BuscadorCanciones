@@ -1,0 +1,36 @@
+install FontaWebSome V-5.15.4
+link --> https://fontawesome.com/v5/docs/web/use-with/react
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+1- create components
+
+    import ReactDOM from 'react-dom'
+    import { library } from '@fortawesome/fontawesome-svg-core'
+    import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+    library.add(faCheckSquare, faCoffee)
+
+    faCheckSquare | estos son emoticones 
+    faCoffee      | que se estan pasando
+    -------------------------------------
+
+    --> check-square  (Nombre original)
+    --> faCheckSquare (Se escribe asi en CamelCase)
+
+    ejemplo
+      <FontAwesomeIcon icon="fa-solid fa-cup-togo" />
+    -->faCupTogo
+
+2- Importamos al Index.js
+    import './components/FontWeb'
+
+3- se usa en la app.js
+  import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+  <div>
+      <FontAwesomeIcon icon="check-square" />
+      Your <FontAwesomeIcon icon="coffee" /> is hot and ready!
+  </div>
